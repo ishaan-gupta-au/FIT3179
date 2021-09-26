@@ -9,7 +9,7 @@
     "layer": [
         {
             "data": {
-                "url": "data/countries.geo.json",
+                "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179/main/js/countries.geo.json",
                 "format": {
                     "type": "topojson",
                     "feature": "countries.geo"
@@ -23,7 +23,7 @@
         },
         {
             "data": {
-                "url": "data/coral_bleaching.csv"
+                "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179/main/data/coral_bleaching.csv"
             },
             "mark": {
                 "type": "circle",
