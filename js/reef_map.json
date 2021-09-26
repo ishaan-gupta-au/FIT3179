@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 500,
+    "title": "Coral Bleaching Across the Globe",
+    "projection": {
+        "type": "equalEarth"
+    },
+    "layer": [
+        {
+            "data": {
+                "url": "data/countries.geo.json",
+                "format": {
+                    "type": "topojson",
+                    "feature": "countries.geo"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgray",
+                "stroke": "white"
+            }
+        },
+        {
+            "data": {
+                "url": "data/coral_bleaching.csv"
+            },
+            "mark": {
+                "type": "circle",
+                "tooltip": {
+                    "content": "data"
+                }
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "Longitude_Degrees",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "Latitude_Degrees",
+                    "type": "quantitative"
+                },
+                "size": {
+                    "field": "Average_Bleaching",
+                    "type": "quantitative",
+                    "scale": {
+                        "domain": [
+                            0,
+                            300
+                        ]
+                    }
+                },
+                "color": {
+                    "field": "Temperature_Mean",
+                    "type": "quantitative",
+                    "scale": {
+                        "scheme": "reds"
+                    }
+                }
+            }
+        }
+    ]
+}
