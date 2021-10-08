@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Share of global greenhouse emissions from food (2015)",
+    "title": "Share of Global Greenhouse Emissions from Food (2015)",
     "width": 800,
     "height": 600,
     "projection": {"type": "equirectangular"},
