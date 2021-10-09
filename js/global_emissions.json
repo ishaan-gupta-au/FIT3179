@@ -40,7 +40,7 @@
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [0, 3.5, 7.0, 10.5, 14]
+            "domain": [0.5, 4, 7.5, 11]
           }
         },
         "tooltip": [
