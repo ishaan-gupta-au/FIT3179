@@ -10,12 +10,12 @@
     },
     "transform": [
       {
-        "lookup": "properties.NAME",
+        "lookup": "properties.BRK_A3",
         "from": {
           "data": {
             "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/share-global-food-emissions.csv"
           },
-          "key": "Country",
+          "key": "Code",
           "fields": ["Share of global food emissions"]
         }
       }
