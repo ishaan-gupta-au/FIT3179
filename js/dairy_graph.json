@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of four large companies as a small multiples of area charts.",
+    "transform": [{"filter": "datum.Code != 'IDN'"}],
+    "width": 300,
+    "height": 250,
+    "data": {"url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/top_emissions.csv"},
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": "Time",
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "Milk Production (Tonnes)",
+        "type": "quantitative",
+        "title": "Milk Production (Tonnes)",
+        "axis": {"grid": false}
+      },
+      "color": {
+        "field": "Code",
+        "type": "nominal"
+      },
+      "row": {
+        "field": "Code",
+        "type": "nominal",
+        "title": null
+      }
+    }
+  }
