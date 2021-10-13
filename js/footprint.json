@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Emissions Per Kilogram",
+    "width": "container",
+    "height": 200,
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      },
+    "data": {
+        "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/footprint.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "Emissions Per Kg",
+            "type": "quantitative",
+            "axis": {
+                "grid": false
+            },
+            "title": null
+        },
+        "y": {
+            "field": "Food",
+            "type": "nominal",
+            "sort": "-x",
+            "axis": {
+                "grid": false},
+            "title": null
+        },
+        "color": {
+            "value": "#51b2cd"
+        },
+        "tooltip": [
+            {
+                "field": "Emissions Per Kg",
+                "type": "quantitative"
+            },
+            {
+                "field": "Food",
+                "type": "nominal"
+            }
+        ]
+    }
+}
