@@ -1,8 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Share of Global Greenhouse Gas Emissions from Food (2015)",
-  "width": 800,
-  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/js/ne_110m_admin_0_countries.json",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
