@@ -1,4 +1,4 @@
-Country,Code,Year,Share of Emissions (%),Meat Supply Per Capita (Kg),Per Capita Milk Consumption (Kg),Per Capita Egg Consumption (Kg),Per Capita Seafood Consumption (Kg),Cattle Count,Poultry Count,Pig Count,Beef Production (Tonnes),Poultry Production (Tonnes),Pigmeat Production (Tonnes),Milk Production (Tonnes),Seafood Production (Tonnes),Egg Production (Tonnes),GDP Per Capita
+Country,Code,Year,Share of Emissions (%),Meat Supply Per Capita (Kg),Per Capita Milk Consumption (Kg),Per Capita Egg Consumption (Kg),Per Capita Seafood Consumption (Kg),Cattle Count,Poultry Count,Pig Count,Beef Production (Tonnes),Poultry Production (Tonnes),Pigmeat Production (Tonnes),Milk Production (Tonnes),Seafood Production (Tonnes),Egg Production (Tonnes),GDP Per Capita ($)
 Australia,AUS,1990,1.146432829,115.25,232.97,9.68,19.84,23162208,61472000,2647572,1676726,412584,317117,6456000,12401,188000,31058.25967
 Australia,AUS,1991,1.139144825,112.12,232.26,7.96,20.05,23662256,56906000,2531468,1759569,416639,312116,6601000,14327,160500,30542.91971
 Australia,AUS,1992,1.120374848,112.14,237.34,6.63,21.21,23879984,61801000,2792386,1790870,443412,335785,6941000,16422,139900,30298.92902
