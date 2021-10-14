@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/top_emissions.csv"
+    },
+    "selection": {
+      "selector": {
+        "type": "single",
+        "fields": ["column"],
+        "bind": {
+          "input": "select",
+          "options": [
+            "Beef Production (Tonnes)",
+            "Pigmeat Production (Tonnes)",
+            "Poultry Production (Tonnes)"
+          ],
+          "labels": ["Beef", "Pigmeat", "Poultry"],
+          "name": "Meat: "
+        },
+        "init": {"column": "Beef Production (Tonnes)"}
+      }
+    },
+    "transform": [
+      {
+        "fold": [
+          "Beef Production (Tonnes)",
+          "Pigmeat Production (Tonnes)",
+          "Poultry Production (Tonnes)"
+        ],
+        "as": ["column", "value"]
+      },
+      {"filter": {"selection": "selector"}}
+    ],
+    "mark": {"type": "line", "point": true},
+    "encoding": {
+      "x": {"field": "Year", "axis": {"grid": false}, "title": null},
+      "y": {
+        "field": "value",
+        "axis": {"grid": false},
+        "type": "quantitative",
+        "title": null
+      },
+      "color": {"field": "Code", "type": "nominal"},
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Year", "type": "quantitative"},
+        {"field": "value", "type": "quantitative", "title": "Tonnes"}
+      ]
+    }
+  }
