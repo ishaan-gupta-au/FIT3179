@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 425,
-  "height": 240,
+  "width": "container",
+  "height": 260,
   "config": {
-    "style": {"cell": {"stroke": "transparent"}},
     "legend": {
       "labelFontSize": 10,
       "gradientDirection": "horizontal",
@@ -24,18 +23,18 @@
     },
     {
       "name": "zoom_level",
-      "value": 65,
+      "value": 105,
       "bind": {
         "input": "range",
         "min": 65,
-        "max": 165,
+        "max": 200,
         "step": 10,
         "name": "Zoom: "
       }
     },
     {
       "name": "center_to",
-      "value": [6, 0],
+      "value": [6, 14],
       "bind": {
         "input": "select",
         "options": [
