@@ -1,52 +1,122 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "config": {"style": {"cell": {"stroke": "transparent"}}},
-    "data": {
-      "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/top_emissions.csv"
-    },
-    "selection": {
-      "selector": {
-        "type": "single",
-        "fields": ["column"],
-        "bind": {
-          "input": "select",
-          "options": [
-            "Beef Production (Tonnes)",
-            "Pigmeat Production (Tonnes)",
-            "Poultry Production (Tonnes)"
-          ],
-          "labels": ["Beef", "Pigmeat", "Poultry"],
-          "name": "Meat: "
-        },
-        "init": {"column": "Beef Production (Tonnes)"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 190,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
       }
     },
-    "transform": [
-      {
-        "fold": [
-          "Beef Production (Tonnes)",
-          "Pigmeat Production (Tonnes)",
-          "Poultry Production (Tonnes)"
-        ],
-        "as": ["column", "value"]
-      },
-      {"filter": {"selection": "selector"}}
-    ],
-    "mark": {"type": "line", "point": true},
-    "encoding": {
-      "x": {"field": "Year", "axis": {"grid": false}, "title": null},
-      "y": {
-        "field": "value",
-        "axis": {"grid": false},
-        "type": "quantitative",
-        "title": null
-      },
-      "color": {"field": "Code", "type": "nominal"},
-      "tooltip": [
-        {"field": "Country", "type": "nominal"},
-        {"field": "Year", "type": "quantitative"},
-        {"field": "value", "type": "quantitative", "title": "Tonnes"}
-      ]
+    "legend": {
+      "title": null,
+      "padding": 2
     }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/top_emissions.csv"
+  },
+  "selection": {
+    "meat_highlight": {
+      "type": "single",
+      "fields": [
+        "column"
+      ],
+      "bind": {
+        "input": "select",
+        "options": [
+          "Beef Production (Tonnes)",
+          "Milk Production (Tonnes)",
+          "Pigmeat Production (Tonnes)",
+          "Poultry Production (Tonnes)",
+          "Seafood Production (Tonnes)"
+        ],
+        "labels": [
+          "Beef",
+          "Milk",
+          "Pigmeat",
+          "Poultry",
+          "Seafood"
+        ],
+        "name": "Meat: "
+      },
+      "init": {
+        "column": "Beef Production (Tonnes)"
+      }
+    },
+    "code_highlight": {
+      "type": "multi",
+      "fields": [
+        "Code"
+      ],
+      "bind": "legend"
+    }
+  },
+  "transform": [
+    {
+      "fold": [
+        "Beef Production (Tonnes)",
+        "Milk Production (Tonnes)",
+        "Pigmeat Production (Tonnes)",
+        "Poultry Production (Tonnes)",
+        "Seafood Production (Tonnes)"
+      ],
+      "as": [
+        "column",
+        "value"
+      ]
+    },
+    {
+      "filter": {
+        "selection": "meat_highlight"
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "axis": {
+        "grid": false
+      },
+      "title": null
+    },
+    "y": {
+      "field": "value",
+      "axis": {
+        "grid": false
+      },
+      "type": "quantitative",
+      "title": null
+    },
+    "opacity": {
+      "condition": {
+        "selection": "code_highlight",
+        "value": 1
+      },
+      "value": 0
+    },
+    "color": {
+      "field": "Code",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Tonnes"
+      }
+    ]
   }
+}

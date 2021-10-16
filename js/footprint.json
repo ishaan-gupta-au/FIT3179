@@ -9,7 +9,7 @@
             "stroke": "transparent"
           }
         }
-      },
+    },
     "data": {
         "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/footprint.csv"
     },
@@ -28,7 +28,8 @@
             "type": "nominal",
             "sort": "-x",
             "axis": {
-                "grid": false},
+                "grid": false,
+                "ticks": false},
             "title": null
         },
         "color": {
