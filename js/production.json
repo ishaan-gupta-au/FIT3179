@@ -72,10 +72,7 @@
       }
     }
   ],
-  "mark": {
-    "type": "line",
-    "point": true
-  },
+  "mark": "area",
   "encoding": {
     "x": {
       "field": "Year",
@@ -101,7 +98,8 @@
     },
     "color": {
       "field": "Code",
-      "type": "nominal"
+      "type": "nominal",
+      "scale": {"scheme": "viridis"}
     },
     "tooltip": [
       {

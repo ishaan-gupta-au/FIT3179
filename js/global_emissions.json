@@ -5,8 +5,7 @@
   "config": {
     "legend": {
       "labelFontSize": 10,
-      "gradientDirection": "horizontal",
-      "gradientLength": 122
+      "gradientLength": 100
     }
   },
   "params": [
@@ -23,22 +22,22 @@
     },
     {
       "name": "zoom_level",
-      "value": 100,
+      "value": 125,
       "bind": {
         "input": "range",
-        "min": 65,
-        "max": 200,
-        "step": 20,
+        "min": 75,
+        "max": 250,
+        "step": 25,
         "name": "Zoom: "
       }
     },
     {
       "name": "center_to",
-      "value": [6, 14],
+      "value": [0, 10],
       "bind": {
         "input": "select",
         "options": [
-          [6, 0],
+          [0, 0],
           [34.5085, 8.7832],
           [100.6197, 34.0479],
           [15.2551, 54.526],
@@ -106,7 +105,14 @@
         "color": {
           "field": "Share of Emissions (%)",
           "type": "quantitative",
-          "scale": {"type": "threshold", "domain": [0.5, 4, 7.5, 11]}
+          "scale": {"scheme": "viridis", "type": "threshold", "domain": [0.5, 4, 7.5, 11]},
+          "legend": {
+            "orient": "none",
+            "direction": "horizontal",
+            "legendX": 10,
+            "legendY": 220,
+            "title": null
+          }
         },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
