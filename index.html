@@ -76,6 +76,19 @@
         </div>
     </div>
     <!-- end pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-3-5">
+            <div class="description description-left">
+                <h2>Cattle Count vs Cattle Slaughtered</h2>
+                <p>The adjacent donut chart shows the number of live cattle versus cattle slaughtered in India. Though India has the largest cattle count in the world, beef slaughter rates pails in comparison to other countries with large cattle populations. Consequently, cows live longer and emit more greenhouse gases over their lifetime. </p>
+            </div>
+        </div>
+        <div class="pure-u-2-5">
+            <div id="vis4" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- pure grid group -->
+
 
     <div class="pure-g">
         <div class="pure-u-1-1 small-font">
@@ -87,6 +100,7 @@
     var vg_1 = "js/global_emissions.json"
     var vg_2 = "js/footprint.json"
     var vg_3 = "js/production.json"
+    var vg_4 = "js/cattle.json"
 
     vegaEmbed("#vis1",vg_1).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
@@ -97,6 +111,10 @@
     }).catch(console.error);
 
     vegaEmbed("#vis3",vg_3).then(function(result){
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
+    }).catch(console.error);
+
+    vegaEmbed("#vis4",vg_4).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
     </script>
