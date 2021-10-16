@@ -1,4 +1,4 @@
-Country,Code,Year,Cattle,Value,Class
+Country,Code,Year,Status,Value,Class
 Brazil,BRA,1990,Live Count,147102320,1
 Brazil,BRA,1990,Slaughtered,22500000,2
 Brazil,BRA,1991,Live Count,152135505,1
