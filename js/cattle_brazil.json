@@ -4,19 +4,20 @@
     "data": {
       "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/cattle.csv"
     },
-    "width": 140,
-    "height": 250,
+    "width": 135,
+    "height": 210,
     "transform": [
       {"filter": "datum.Year == 2015"},
       {"filter": "datum.Code == 'BRA'"}
     ],
-    "mark": {"type": "arc", "innerRadius": 50},
+    "mark": "arc",
     "encoding": {
       "theta": {"field": "Value", "type": "quantitative"},
       "color": {
         "field": "Status",
         "type": "nominal",
-        "scale": {"scheme": "viridis"}
+        "scale": {"scheme": "viridis"},
+        "legend": null
       },
       "tooltip": [
         {"field": "Country", "type": "nominal"},
