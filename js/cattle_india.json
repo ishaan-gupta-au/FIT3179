@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/cattle.csv"
+    },
+    "width": 140,
+    "height": 250,
+    "transform": [
+      {"filter": "datum.Year == 2015"},
+      {"filter": "datum.Code == 'IND'"}
+    ],
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "Value", "type": "quantitative"},
+      "color": {
+        "field": "Status",
+        "type": "nominal",
+        "scale": {"scheme": "viridis"},
+      "legend": null
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Value", "type": "quantitative", "title": "Count"},
+        {"field": "Status", "type": "nominal"},
+        {"field": "Year", "type": "quantitative"}
+      ]
+    }
+  }
+  
