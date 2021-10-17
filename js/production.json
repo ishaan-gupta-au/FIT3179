@@ -26,19 +26,13 @@
         "input": "select",
         "options": [
           "Beef Production (Tonnes)",
-          "Milk Production (Tonnes)",
-          "Pigmeat Production (Tonnes)",
-          "Poultry Production (Tonnes)",
-          "Seafood Production (Tonnes)"
+          "Milk Production (Tonnes)"
         ],
         "labels": [
           "Beef",
-          "Milk",
-          "Pigmeat",
-          "Poultry",
-          "Seafood"
+          "Milk"
         ],
-        "name": "Meat: "
+        "name": "Food: "
       },
       "init": {
         "column": "Beef Production (Tonnes)"
@@ -56,10 +50,7 @@
     {
       "fold": [
         "Beef Production (Tonnes)",
-        "Milk Production (Tonnes)",
-        "Pigmeat Production (Tonnes)",
-        "Poultry Production (Tonnes)",
-        "Seafood Production (Tonnes)"
+        "Milk Production (Tonnes)"
       ],
       "as": [
         "column",
