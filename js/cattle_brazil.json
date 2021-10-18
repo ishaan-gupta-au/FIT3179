@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "title": {"text": "BRAZIL",
+              "orient": "top"
+    },
     "data": {
       "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/cattle.csv"
     },
@@ -17,7 +20,11 @@
         "field": "Status",
         "type": "nominal",
         "scale": {"scheme": "viridis"},
-        "legend": null
+        "legend": {"orient": "none",
+                   "legendX": 100,
+                   "legendY": 1,
+                   "title": null
+        }
       },
       "tooltip": [
         {"field": "Country", "type": "nominal"},

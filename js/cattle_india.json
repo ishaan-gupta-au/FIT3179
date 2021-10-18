@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": {"style": {"cell": {"stroke": "transparent"}}},
+    "title": {"text": "INDIA",
+              "orient": "top"
+    },
     "data": {
       "url": "https://raw.githubusercontent.com/ishaan-gupta-au/FIT3179_Assignment/main/data/cattle.csv"
     },
