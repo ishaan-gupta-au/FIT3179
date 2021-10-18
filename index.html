@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Impact of Beef on Global Greenhouse Gas Emissions</title>
+    <title>Impact of Cattle on Global Greenhouse Gas Emissions</title>
     <!-- Import Vega & Vega-Lite -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -29,23 +29,23 @@
     <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h1>Global Impact of Beef on Greenhouse Gas Emissions</h1>
-                <p>The Earth has experienced rapid climate change in the recent years. Though we may not often think about what we eat, food has a major carbon footprint, accounting for over a quarter of greenhouse gas emissions across the globe. We wish to explore this impact in further detail and determine how beef impacts the environment.</p>
+                <h1>Global Impact of Cattle on Greenhouse Gas Emissions</h1>
+                <p>The Earth has experienced rapid climate change in the recent years. Though we may not often think about what we eat, food has a major carbon footprint, accounting for over a quarter of greenhouse gas emissions across the globe. We wish to explore this impact in further detail and determine how cattle impacts the environment.</p>
             </div>
         </div>
     <!-- end pure grid group -->
 
         <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <div class="description description-left">
-                    <h2>Share of Global Greenhouse Gas Emissions From Food</h2>
-                    <p>The adjacent graph illustrates the global share of greenhouse gas emissions caused by food as at <span class="green_text">2015</span>. Of all the countries, <span class="green_text">China</span> occupies the highest share of emissions, followed by Indonesia, the U.S.A, Brazil and India.</p>
-                </div>
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div class="description description-left">
+                <h2>Share of Global Greenhouse Gas Emissions From Food</h2>
+                <p>The adjacent graph illustrates the global share of greenhouse gas emissions caused by food as at <span class="green_text">2015</span>. Of all the countries, <span class="green_text">China</span> occupies the highest share of emissions, followed by Indonesia, the U.S.A, Brazil and India.</p>
             </div>
-            <div class="pure-u-1-1">
-                <div id = "vis1" class="vis-container"></div>
-            </div>
+        </div>
+        <div class="pure-u-1-1">
+            <div id = "vis1" class="vis-container"></div>
+        </div>
     </div>
     <!-- end pure grid group -->
 
@@ -76,6 +76,8 @@
         </div>
     </div>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-9-24">
             <div class="description description-left">
@@ -93,14 +95,23 @@
             <div id="vis6" class="vis-container"></div>
         </div>
     </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <h2>Concluding Remarks</h2>
+            <p>There are ramifications not only in producing beef, but also in raising livestock. Increasingly, we need to develop more sustainable ways of farming so that we can protect the environment from further damage.</p>
+        </div>
+    </div>
+
     <!-- pure grid group -->
-
-
     <div class="pure-g">
         <div class="pure-u-1-1 small-font">
             <p>This visualisation is created by <a href="https://github.com/ishaan-gupta-au" target="_blank">Ishaan Gupta</a></p>
         </div>
     </div>
+    <!-- end pure grid group -->
+
 
     <script type="text/javascript">
     var vg_1 = "js/global_emissions.json"
@@ -110,27 +121,27 @@
     var vg_5 = "js/cattle_usa.json"
     var vg_6 = "js/cattle_brazil.json"
 
-    vegaEmbed("#vis1",vg_1).then(function(result){
+    vegaEmbed("#vis1",vg_1, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
 
-    vegaEmbed("#vis2",vg_2).then(function(result){
+    vegaEmbed("#vis2",vg_2, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
 
-    vegaEmbed("#vis3",vg_3).then(function(result){
+    vegaEmbed("#vis3",vg_3, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
 
-    vegaEmbed("#vis4",vg_4).then(function(result){
+    vegaEmbed("#vis4",vg_4, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
 
-    vegaEmbed("#vis5",vg_5).then(function(result){
+    vegaEmbed("#vis5",vg_5, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
 
-    vegaEmbed("#vis6",vg_6).then(function(result){
+    vegaEmbed("#vis6",vg_6, {"actions": false}).then(function(result){
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result view
     }).catch(console.error);
     </script>
